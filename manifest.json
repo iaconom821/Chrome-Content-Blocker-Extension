@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Focus",
+    "version": "1.0",
+    "description": "Block Site Content To Allow For Focus on Productive Activities",
+    "content_scripts":[
+        {
+            "matches":["https://www.youtube.com/*", "https://news.google.com/*", "https://www.tumblr.com/*"],
+            "js": ["jquery-3.1.1.min.js", "./main.js"],
+            "css": ["index.css"]
+        }
+    ]
+}
