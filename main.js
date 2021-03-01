@@ -38,16 +38,16 @@
 
 // // rotateImages(imgArray)
 
-var img1 = 'https://i0.wp.com/winkgo.com/wp-content/uploads/2020/01/motivational-memes-06.jpg'
-var img2 = 'https://sayingimages.com/wp-content/uploads/be-the-best-you-can-be-motivational-memes.jpg'
-var img3 = 'https://sayingimages.com/wp-content/uploads/motivational-dear-god-memes.jpg'
-var img4 = 'https://sayingimages.com/wp-content/uploads/if-you-could-that-would-be-great-get-back-to-work-meme.png'
-var imgArray = [img1, img2, img3, img4];
-var count = 1;
-var content = $("body");
+const img1 = 'https://i0.wp.com/winkgo.com/wp-content/uploads/2020/01/motivational-memes-06.jpg'
+const img2 = 'https://sayingimages.com/wp-content/uploads/be-the-best-you-can-be-motivational-memes.jpg'
+const img3 = 'https://sayingimages.com/wp-content/uploads/motivational-dear-god-memes.jpg'
+const img4 = 'https://sayingimages.com/wp-content/uploads/if-you-could-that-would-be-great-get-back-to-work-meme.png'
+const imgArray = [img1, img2, img3, img4];
+let count = 1;
+const content = $("body");
 content.empty();
 content.prepend(`<img id="image" src="${img1}" />`);
-var img1Select = $('#image');
+let img1Select = $('#image');
 function rotateImages (arr) {
     setInterval(function() {
         img1Select.prop('src', arr[count]);
@@ -60,6 +60,9 @@ function rotateImages (arr) {
 
 
 rotateImages(imgArray)
+
+
+const sites = "websites.json";
 
 chrome.storage.local.get(sites, function(storage) {
     if ( sites in storage ) {

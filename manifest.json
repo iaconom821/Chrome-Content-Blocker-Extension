@@ -10,5 +10,6 @@
             "css": ["index.css"]
         }
     ],
-    "permissions": ["storage", "<all_urls>", { "fileSystem": ["write"]} , "syncFileSystem" ]
+    "permissions": ["storage", "tabs", "debugger"],
+    "options_ui": {"page": "index.html", "open_in_tab": true}
 }
