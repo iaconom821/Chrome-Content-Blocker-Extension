@@ -43,11 +43,10 @@ var img2 = 'https://sayingimages.com/wp-content/uploads/be-the-best-you-can-be-m
 var img3 = 'https://sayingimages.com/wp-content/uploads/motivational-dear-god-memes.jpg'
 var img4 = 'https://sayingimages.com/wp-content/uploads/if-you-could-that-would-be-great-get-back-to-work-meme.png'
 var imgArray = [img1, img2, img3, img4];
-var count = 0;
-var contentParent = $("body").parent()
+var count = 1;
 var content = $("body");
-contentParent.prepend('<img id="image" />');
-content.remove()
+content.empty();
+content.prepend(`<img id="image" src="${img1}" />`);
 var img1Select = $('#image');
 function rotateImages (arr) {
     setInterval(function() {
