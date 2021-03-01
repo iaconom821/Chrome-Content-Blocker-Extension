@@ -62,4 +62,15 @@ function rotateImages (arr) {
 
 rotateImages(imgArray)
 
-
+chrome.storage.local.get(sites, function(storage) {
+    if ( sites in storage ) {
+      callback.call(this, storage[sites].blocked);
+    } else {
+      storage = {};
+      storage[sites] = { sites: [] };
+      chrome.storage.local.set( storage, function() {
+        callback.call(this, storage[sites].blocked);
+      }.bind(this));
+    }
+    console.log('sites file created, now find it')
+})

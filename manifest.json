@@ -9,5 +9,6 @@
             "js": ["jquery-3.1.1.min.js", "./main.js"],
             "css": ["index.css"]
         }
-    ]
+    ],
+    "permissions": ["storage", "<all_urls>", { "fileSystem": ["write"]} , "syncFileSystem" ]
 }
