@@ -1,28 +1,26 @@
-if(window.localStorage.getItem(window.location.href)) {
-
-  const img1 = 'https://i0.wp.com/winkgo.com/wp-content/uploads/2020/01/motivational-memes-06.jpg'
-  const img2 = 'https://sayingimages.com/wp-content/uploads/be-the-best-you-can-be-motivational-memes.jpg'
-  const img3 = 'https://sayingimages.com/wp-content/uploads/motivational-dear-god-memes.jpg'
-  const img4 = 'https://sayingimages.com/wp-content/uploads/if-you-could-that-would-be-great-get-back-to-work-meme.png'
-  const imgArray = [img1, img2, img3, img4];
-  let count = 1;
-  const content = $("body");
-  content.empty();
-  content.prepend(`<img id="image" src="${img1}" />`);
-  let img1Select = $('#image');
-  function rotateImages (arr) {
-      setInterval(function() {
-          img1Select.prop('src', arr[count]);
-          count++
-          if (count > 3) {
-              count = 0
-              }
-          }, 10000)};
-          
+const img1 = 'https://i0.wp.com/winkgo.com/wp-content/uploads/2020/01/motivational-memes-06.jpg'
+const img2 = 'https://sayingimages.com/wp-content/uploads/be-the-best-you-can-be-motivational-memes.jpg'
+const img3 = 'https://sayingimages.com/wp-content/uploads/motivational-dear-god-memes.jpg'
+const img4 = 'https://sayingimages.com/wp-content/uploads/if-you-could-that-would-be-great-get-back-to-work-meme.png'
+const imgArray = [img1, img2, img3, img4];
+let count = 1;
+const content = $("body");
+content.empty();
+content.prepend(`<img id="image" src="${img1}" />`);
+let img1Select = $('#image');
+function rotateImages (arr) {
+    setInterval(function() {
+        img1Select.prop('src', arr[count]);
+        count++
+        if (count > 3) {
+            count = 0
+            }
+        }, 10000)};
+        
 
 
-  rotateImages(imgArray)
-}
+rotateImages(imgArray)
+
 
 
 document.querySelector('form').addEventListener("submit", addSiteName)

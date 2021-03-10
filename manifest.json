@@ -5,7 +5,7 @@
     "description": "Block Site Content To Allow For Focus on Productive Activities",
     "content_scripts":[
         {
-            "matches":["https://*/*"],
+            "matches":["https://www.youtube.com/*", "https://www.facebook.com/*", "https://www.youtube.com/*"],
             "js": ["jquery-3.1.1.min.js", "./main.js"],
             "css": ["index.css"]
         }
